@@ -1,0 +1,9 @@
+.ScoreDisplay {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+}
+.ScoreDisplay table{
+    justify-content: center;
+    width: 90%;
+}

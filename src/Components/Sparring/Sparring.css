@@ -1,0 +1,20 @@
+.center{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.Sparring{
+  background-color: #f5f5f0;
+  text-align: center;
+}
+
+.red{
+  color:red;
+  display: inline-block;
+}
+
+.blue{
+  color:blue;
+  display: inline-block;
+}

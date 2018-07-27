@@ -1,0 +1,10 @@
+.MajorDeduction button{
+    color: white;
+    background-color: #b30000;
+    width: 90%;
+    height: 80%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}

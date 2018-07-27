@@ -1,0 +1,54 @@
+.Scoretable {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.Scoretable table, th, td{
+  border: 1px lightgray solid;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+
+h2{
+  display: inline-block;
+}
+
+.blue{
+color: blue;
+padding: 10px;
+border-radius: .25em;
+text-align: center;
+justify-content: center;
+align-items: center;
+}
+
+
+.red{
+color: red;
+padding: 10px;
+text-align: center;
+justify-content: center;
+align-items: center;
+}
+
+.redScore{
+  color: red;
+  display: inline;
+}
+
+.blueScore{
+  color: blue;
+  display: inline;
+}
+
+.bluebackground{
+  background-color: #e6e6ff;
+}
+
+.redbackground{
+  background-color: #ffe6e6;
+}
