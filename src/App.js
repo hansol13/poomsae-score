@@ -5,9 +5,13 @@ import Poomsae from './Components/Poomsae/Poomsae';
 import Sparring from './Components/Sparring/Sparring';
 import Error from './Components/Error';
 
+import initReactFastClick from 'react-fastclick';
+initReactFastClick();
+
 class App extends Component {
   render() {
     return (
+      
       <BrowserRouter>
         <div>
           <Switch>
