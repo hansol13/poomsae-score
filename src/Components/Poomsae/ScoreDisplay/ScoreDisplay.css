@@ -1,5 +1,6 @@
 .ScoreDisplay {
     text-align: center;
+    justify-content: center;
     font-weight: bold;
     font-size: 1em;
 }
