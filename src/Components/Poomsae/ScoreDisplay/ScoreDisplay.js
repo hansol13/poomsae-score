@@ -1,6 +1,7 @@
 import React from 'react';
 import MajorDeduction from '../MajorDeduction/MajorDeduction';
 import MinorDeduction from '../MinorDeduction/MinorDeduction';
+import BreakdownTable from './BreakdownTable/BreakdownTable';
 import classes from './ScoreDisplay.css';
 
 import Grid from '@material-ui/core/Grid';
@@ -17,7 +18,7 @@ const scoreDisplay = (props) => {
         </Grid>
         <Grid item xs={6}>
           <Paper>
-            <Typography variant="title"><br/>TECHNICAL:<br/></Typography>
+            <Typography variant="title"><br/>TECHNICAL<br/></Typography>
             <Typography variant="display1">{props.technicalScore.toFixed(2)}</Typography>
             <MajorDeduction clickedMajorScore={props.clickedTechMajor} />
             <MinorDeduction clickedMinorScore={props.clickedTechMinor} />
@@ -26,7 +27,7 @@ const scoreDisplay = (props) => {
 
         <Grid item xs={6}>
           <Paper>
-            <Typography variant="title"><br/>PRESENTATION:<br/></Typography>
+            <Typography variant="title"><br/>PRESENTATION<br/></Typography>
             <Typography variant="display1">{props.performanceScore.toFixed(2)}</Typography>
             <MajorDeduction clickedMajorScore={props.clickedPerfMajor} />
             <MinorDeduction clickedMinorScore={props.clickedPerfMinor} />
@@ -39,7 +40,15 @@ const scoreDisplay = (props) => {
             <Typography variant="title">OVERALL SCORE<br/></Typography>
             <Typography variant="display2"><strong>{score.toFixed(2)}</strong></Typography>
             <br/>
+            
           </Paper>
+          <br/>
+          <BreakdownTable 
+              techMinor = {props.technicalMinorCount}
+              techMajor = {props.technicalMajorCount}
+              perfMinor = {props.performanceMinorCount}
+              perfMajor = {props.performanceMajorCount}
+            />
         </Grid>
       </Grid>
       <br/>  

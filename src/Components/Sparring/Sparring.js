@@ -4,7 +4,6 @@ import { Button } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 
 import Scoretable from './ScoreTable/Scoretable';
-import Victory from './Victory/Victory';
 import Reset from './Reset/Reset';
 
 import classes from './Sparring.css';
@@ -24,9 +23,6 @@ class Sparring extends Component{
       foul:0,
       bonus:0,
     },
-    blueName:'',
-    redName:'',
-    winner: 'none'
   }
 
   // blue handlers
@@ -94,22 +90,6 @@ class Sparring extends Component{
     // console.log("reset sparring" + this.state);
   }
 
-  victoryHandler = (event) => {
-    let blueScore = this.state.blue.bonus + this.state.blue.bodyshot*2 + this.state.blue.headshot*3 + this.state.red.foul;
-    let redScore = this.state.red.bonus + this.state.red.bodyshot*2 + this.state.red.headshot*3 + this.state.blue.foul;
-    if(blueScore>redScore) {
-      this.setState({winner: 'Blue'});
-    } else if (blueScore<redScore){
-      this.setState({winner: 'red'});
-    } else{
-      this.setState({winner:'none'});
-    }
-    alert('Winner: ' + this.state.winner);
-  }
-
-  blueNameHandler = (event) => {this.setState({blueName:event.target.value});}
-  redNameHandler = (event) => {this.setState({redName:event.target.value});}
-
   render() {
     let blueScore = this.state.blue.bonus + this.state.blue.bodyshot*2 + this.state.blue.headshot*3 + this.state.red.foul;
     let redScore = this.state.red.bonus + this.state.red.bodyshot*2 + this.state.red.headshot*3 + this.state.blue.foul;
@@ -135,9 +115,7 @@ class Sparring extends Component{
            />
         
         <div className = {classes.center}>
-          <Reset clickedReset={this.resetHandler} /> 
-          <br/><br/>
-          <Victory clickedVictory={this.victoryHandler} />
+          <Reset clickedReset={this.resetHandler} />
           <br/><br/>
           <NavLink to="/poomsae-score">
             <Button variant="contained" color="default">POOMSAE SCOREBOARD</Button>
