@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter, Route, Switch} from 'react-router-dom';
+import { BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import Poomsae from './Components/Poomsae/Poomsae';
 import Sparring from './Components/Sparring/Sparring';
@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       
-      <HashRouter>
+      <BrowserRouter>
         <div>
           <Switch>
             <Route path="/poomsae-score/" exact component={Poomsae} />
@@ -21,7 +21,7 @@ class App extends Component {
             <Route component={Error} />
           </Switch> 
         </div>
-      </HashRouter>
+      </BrowserRouter>
     );
   }
 }
